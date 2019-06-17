@@ -2,9 +2,9 @@
 
 Disini saya membuat sebuah Aplikasi Enkripsi dan Dekripsi sebuah pesan sederhana yang menggunakan Matriks Transpose 6x6
 Tools yang saya gunakan adalah DEV C++ version 5.11
-# Nama  : Dwi Rani Apriyani
-# NIM   : 17.83.0064
-# Kelas : 17-S1TK-01
+Nama  : Dwi Rani Apriyani
+NIM   : 17.83.0064
+Kelas : 17-S1TK-01
 
 Berikut susunan matriks yang saya gunakan :
 ma[0][0] = 'a'; ma[0][1] = 'b'; ma[0][2] = 'c'; ma[0][3] = 'd'; ma[0][4] = 'e'; ma[0][5] = 'f';
