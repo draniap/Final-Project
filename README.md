@@ -1,12 +1,17 @@
 # Final Project Mata Kuliah Pemrograman C++
 
-Disini saya membuat sebuah Aplikasi Enkripsi dan Dekripsi sebuah pesan sederhana yang menggunakan Matriks Transpose 6x6
+Disini saya membuat sebuah Aplikasi Enkripsi dan Dekripsi sebuah pesan sederhana yang menggunakan Matriks Transpose 6x6.
+
 Tools yang saya gunakan adalah DEV C++ version 5.11
+
 Nama  : Dwi Rani Apriyani
+
 NIM   : 17.83.0064
+
 Kelas : 17-S1TK-01
 
 Berikut susunan matriks yang saya gunakan :
+
 ma[0][0] = 'a'; ma[0][1] = 'b'; ma[0][2] = 'c'; ma[0][3] = 'd'; ma[0][4] = 'e'; ma[0][5] = 'f';
 ma[1][0] = 's'; ma[1][1] = 't'; ma[1][2] = 'u'; ma[1][3] = 'v'; ma[1][4] = 'w'; ma[1][5] = 'x';
 ma[2][0] = 'g'; ma[2][1] = 'h'; ma[2][2] = 'i'; ma[2][3] = 'j'; ma[2][4] = 'k'; ma[2][5] = 'l';
