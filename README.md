@@ -26,5 +26,12 @@ ma[5][0] = '5'; ma[5][1] = '6'; ma[5][2] = '7'; ma[5][3] = '8'; ma[5][4] = '9'; 
 
 Sedangkan untuk karakter baris dan kolom yang digunakan untuk hasil ciphertext, matriks diatas dikalikan dengan karakter [D,E,K,R,A,N]
 
-Referensi source code: http://carakuuntuk.blogspot.com/2013/10/cryptography-transposition-cipher-in-c.html
+Referensi source code:
+
+1. http://carakuuntuk.blogspot.com/2013/10/cryptography-transposition-cipher-in-c.html
+
+2. https://www.programiz.com/cpp-programming/examples/matrix-transposehttps://www.programiz.com/cpp-programming/examples/matrix-transpose 
+
+3. https://www.programiz.com/cpp-programming/examples/access-array-pointer
+
 
