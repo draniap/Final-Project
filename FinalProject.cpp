@@ -13,7 +13,7 @@ TOOLS YANG SAYA GUNAKAN ADALAH DEV C++ VERSION 5.11
 // Deklarasi variabel yang digunakan input pesan
 char plainInput[10000]; // Karakter untuk input pesan
 char cipherText[20000]; // Karakter pesan
-char matriksTransposisi[500][500];
+char matriksTransposisi[500][500]; //karakter matriks
 char kataKunci[500]; // Untuk menyimpan karakter kunci proses enkripsi dan dekripsi
 char kunciLainnya[500]; // Penyimpanan sementara kunci dekripsi
 char ma[6][6]; // Untuk tabel huruf dan angka
@@ -33,48 +33,48 @@ int baris;
 int kolom;
 
 // Konstruktor?
-void enkripsi();
-void dekripsi();
+void enkripsi(); //prosedur enkripsi
+void dekripsi(); //prosedur dekripsi
 
-int main(){
+int main(){ //fungsi default
     mainMenu:
-        system("cls");
+        system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
         std::cout << "My Final Project" << std::endl; //Tambilan pesan project
         std::cout << "DEKRAN Encrypt-Decrypt Project" << std::endl; //Tampilan judul project
         std::cout << "====================***====================" << std::endl;
         std::cout << std::endl;
         std::cout << "Pilihan Menu" << std::endl; //Tampilan menu
-        std::cout << " 1. Enkripsi" << std::endl;
-        std::cout << " 2. Dekripsi" << std::endl;
-        std::cout << " 3. Keluar"   << std::endl;
+        std::cout << " 1. Enkripsi" << std::endl; //pihian menu untuk enkripsi
+        std::cout << " 2. Dekripsi" << std::endl; //pilihan menu untuk dekripsi
+        std::cout << " 3. Keluar"   << std::endl; //pilihan menu untuk dari program
         std::cout << "\nPilihan: "  ;
         std::cin >> pilihan;
-        switch(pilihan){
-            case '1':
-                enkripsi();
+        switch(pilihan){ //membuat percabangan pilihan
+            case '1': //mengevalusi kondisi (pilihan)
+                enkripsi(); //memanggil fungsi enkripsi
                 goto mainMenu;
-                break;
-            case '2':
-                dekripsi();
-                goto mainMenu;
-                break;
-            case '3':
+                break; //untuk keluar dari struktur case 1
+            case '2': //mengevalusi kondisi (pilihan)
+                dekripsi(); 
+                goto mainMenu; //memanggil fungsi dekripsi
+                break; //untuk keluar dari struktur case 2
+            case '3': //mengevalusi kondisi (pilihan)
                 goto keluar;
-                break;
+                break; //untuk keluar dari struktur case 1
             default:
                 // Jika terjadi kesalahan pada proses pemilihan menu
-                std::cout << "ERROR!" << std::endl;
-                std::cout << "Menu yang dipilih tidak tersedia. Silakan coba lagi. . ." << std::endl;
-                getch();
+                std::cout << "ERROR!" << std::endl; //menampilkan pesan ERROR
+                std::cout << "Menu yang dipilih tidak tersedia. Silakan coba lagi. . ." << std::endl; //menampilkan pesan menu tidak tersedia
+                getch(); //untuk menghentikan proses yang berjalan
                 goto mainMenu;
         }
 
     keluar:
-    return(0); 
+    return(0); //mengembalikan nilai 0
 }
 // Funsi yang akan digunakan untuk melakukan proses enkripsi
-void enkripsi(){
-    system("cls");
+void enkripsi(){ //isi dari enkripsi yang akan dijalankan
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
     
     // Table array 6x6 yang akan digunakan pada proses enkripsi
     //dalam penyusunan matriks ini menggunakan transposisi secara acak
@@ -86,11 +86,11 @@ void enkripsi(){
 	ma[5][0] = '5'; ma[5][1] = '6'; ma[5][2] = '7'; ma[5][3] = '8'; ma[5][4] = '9'; ma[5][5] = ' ';		
     
     
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Encrypt Project" << std::endl;
+    std::cout << "My Final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Encrypt Project" << std::endl; //Tampilan pesan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
-    std::cout << "Masukkan kalimat yang akan dienkripsi:" << std::endl;
+    std::cout << "Masukkan kalimat yang akan dienkripsi:" << std::endl; //Tampilan pesan
     fflush(stdin); // Bersihkan sisa masukan
     gets(plainInput);
     
@@ -115,9 +115,9 @@ void enkripsi(){
         }
     }
     
-    system("cls");
-    std::cout << "My final Project" << std::endl;
-    std::cout << "DEKRAN Encrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
+    std::cout << "My final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Encrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     
@@ -125,7 +125,7 @@ void enkripsi(){
 
     std::cout << "Masukkan kata kunci untuk mengamankan kalimat\n" << std::endl;
     std::cout << "Kunci yang dimasukkan disarankan untuk tidak memiliki karakter yang sama seperti \"kalimat\"\nkarena dapat terjadi kesalahan pada saat melakukan proses dekripsi." << std::endl;
-    std::cout << "\nKunci = ";
+    std::cout << "\nKunci = "; //Tampilan pesan untuk input kunci
     std::cin >> kataKunci;
     
     // Cari panjang kata kunci
@@ -144,9 +144,9 @@ void enkripsi(){
     }
     
     
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Encrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan
+    std::cout << "My Final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Encrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     
@@ -159,11 +159,11 @@ void enkripsi(){
     }
     
     std::cout << "Pesan akan memasuki tahap enkripsi . ." << std::endl;
-    getch();
+    getch(); //untuk menghentikan proses yang berjalan
     
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Encrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan
+    std::cout << "My Final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Encrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     
@@ -192,16 +192,16 @@ void enkripsi(){
         std::cout << std::endl;
     }
     
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Encrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
+    std::cout << "My Final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Encrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     std::cout << "Enkripsi telah memasuki tahap terakhir. . ." << std::endl;
     
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Encrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
+    std::cout << "My Final Project" << std::endl; //Tampilan judul project
+    std::cout << "DEKRAN Encrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     std::cout << "Proses enkripsi telah selesai. . ." << std::endl;
@@ -218,13 +218,13 @@ void enkripsi(){
     std::cout << std::endl;
     std::cout << "\nKunci jangan sampai hilang sayang!" << std::endl;
     std::cout << "Enter untuk kembali ke menu utama. . .";
-    getch();
+    getch(); //untuk menghentikan proses yang berjalan
 }
 
 
 // Fungsi yang digunakan untuk melakukan proses dekripsi
 void dekripsi(){
-    system("cls");
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
     
     // Table array 6x6 yang digunakan pada proses dekripsi
     //dalam penyusunan matriks ini menggunakan transposisi secara acak sama dengan susunan matriks dalam proses enkripsi
@@ -236,8 +236,8 @@ void dekripsi(){
 	ma[5][0] = '5'; ma[5][1] = '6'; ma[5][2] = '7'; ma[5][3] = '8'; ma[5][4] = '9'; ma[5][5] = ' ';
     
     // Tanya masukan
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Decrypt Project" << std::endl;
+    std::cout << "My Final Project" << std::endl; //Tampilan judul project
+    std::cout << "DEKRAN Decrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     std::cout << "Masukkan kalimat yang akan didekripsi:" << std::endl;
@@ -248,12 +248,12 @@ void dekripsi(){
     panjangKalimat = strlen(cipherText);
     
     // Tanya kata kunci
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Decrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
+    std::cout << "My Final Project" << std::endl; //Tampilan judul project
+    std::cout << "DEKRAN Decrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
-    std::cout << "Masukkan kunci = ";
+    std::cout << "Masukkan kunci = "; //Tampilan pesan untuk input kunci
     std::cin >> kataKunci;
     
     // Cari panjang kata kunci
@@ -291,9 +291,9 @@ void dekripsi(){
         }
     }
     
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Decrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
+    std::cout << "My Final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Decrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     
@@ -307,7 +307,7 @@ void dekripsi(){
     }
     
     std::cout << "Dekripsi akan memasuki tahap kedua . . .";
-    getch();
+    getch(); //untuk menghentikan proses yang berjalan
     
     
     // Tahap kedua
@@ -328,7 +328,7 @@ void dekripsi(){
         }
     }
     
-    system("cls");
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
     std::cout << "My Final Project" << std::endl;
     std::cout << "DEKRAN Decrypt Project" << std::endl;
     std::cout << "====================***====================" << std::endl;
@@ -344,7 +344,7 @@ void dekripsi(){
     }
     
     std::cout << "Dekripsi akan memasuki tahap terakhir . . .";
-    getch();
+    getch(); //untuk menghentikan proses yang berjalan
     
     // Atur ulang penhitung
     posisiCipher = 0;
@@ -357,9 +357,9 @@ void dekripsi(){
         }
     }
     
-    system("cls");
-    std::cout << "My Final Project" << std::endl;
-    std::cout << "DEKRAN Decrypt Project" << std::endl;
+    system("cls"); //untuk membersihkan layar pada program yang akan dijalankan 
+    std::cout << "My Final Project" << std::endl; //Tampilan pesan project
+    std::cout << "DEKRAN Decrypt Project" << std::endl; //Tampilan judul project
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;    
     std::cout << "Proses Dekripsi telah selesai . . ." << std::endl;
@@ -381,5 +381,5 @@ void dekripsi(){
         }
         std::cout << ma[kolom][baris];
     }    
-    getch();
+    getch(); //untuk menghentikan proses yang berjalan
 }
