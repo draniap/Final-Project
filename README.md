@@ -30,7 +30,7 @@ Referensi source code:
 
 1. http://carakuuntuk.blogspot.com/2013/10/cryptography-transposition-cipher-in-c.html
 
-2. https://www.programiz.com/cpp-programming/examples/matrix-transposehttps://www.programiz.com/cpp-programming/examples/matrix-transpose 
+2. https://www.programiz.com/cpp-programming/examples/matrix-transpose 
 
 3. https://www.programiz.com/cpp-programming/examples/access-array-pointer
 
