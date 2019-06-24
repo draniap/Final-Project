@@ -32,6 +32,6 @@ Referensi source code:
 
 2. https://www.programiz.com/cpp-programming/examples/matrix-transpose 
 
-3. https://www.programiz.com/cpp-programming/examples/access-array-pointer
+3. http://andyirwanda.blogspot.com/2015/06/blog-post.html
 
 
