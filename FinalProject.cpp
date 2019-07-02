@@ -241,7 +241,7 @@ void dekripsi(){
     std::cout << "====================***====================" << std::endl;
     std::cout << std::endl;
     std::cout << "Masukkan kalimat yang akan didekripsi:" << std::endl;
-    fflush(stdin); // Bersihkan sisa masukan
+    fflush(stdin); 
     gets(cipherText);
     
     // Cari panjang kode cipher
